@@ -12,9 +12,13 @@
 <body class="font-nunito-200 bg-main5 text-amber-50">
     
     <main class="flex justify-center p-72">
-        <section class="flex justify-center bg-main1 h-60 w-1/2 rounded-3xl">     
+        <section class="flex justify-center bg-gradient-to-tr from-main1 to-main3 h-96 w-96 rounded-3xl border-2 border-main1">     
             <fieldset>
-                <legend class="font-semibold pt-4">Escolha as especificações da sua senha:</legend>
+                <legend class="font-semibold pt-4 text-lg">Escolha as especificações da sua senha:</legend>
+                
+                <div class="mt-7 mb-4 flex justify-center">
+                    <input type="number" placeholder="Tamanho da senha" class="flex shadow-lg text-center rounded-3xl bg-white text-black">
+                </div>
                 
                 <div>
                     <input type="checkbox" id="upperLet">
@@ -35,6 +39,11 @@
                     <input type="checkbox" id="symbol">
                     <label for="symbol">Símbolos</label>
                 </div>
+
+                <div class="pt-10 flex justify-center">
+                    <input type="text" placeholder="Senha gerada:" class="w-80 flex shadow-lg text-center rounded-3xl bg-white text-black">
+                </div>
+                
                 <div class="flex justify-between text-center pt-10">
                     <button class="duration-300 shadow-xl bg-sec1 hover:bg-main5 hover:text-main-1 rounded-3xl h-10 w-32 flex items-center justify-center">Gerar senha</button>
                     <button class="duration-300 shadow-xl bg-sec1 hover:bg-main5 hover:text-main-1 rounded-3xl h-10 w-32 flex items-center justify-center">Copiar senha</button>
