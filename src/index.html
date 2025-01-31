@@ -26,7 +26,7 @@
                 </div>
                 
                 <div>
-                    <input type="checkbox" id=lowerLet">
+                    <input type="checkbox" id="lowerLet"">
                     <label for="lowerLet">Minúsculas</label>
                 </div>
                 
@@ -41,12 +41,12 @@
                 </div>
 
                 <div class="pt-10 flex justify-center">
-                    <input type="" placeholder="Senha gerada:" class="w-80 flex shadow-lg text-center rounded-3xl bg-white text-black">
+                    <input id="pwOutput" type="text" placeholder="Senha gerada:" class="w-80 flex shadow-lg text-center rounded-3xl bg-white text-black" readonly>
                 </div>
                 
                 <div class="flex justify-between text-center pt-10">
-                    <button class="duration-75 shadow-xl bg-sec1 hover:bg-gradient-to-tr from-main5 to-main1 hover:border-2 border-sec2 hover:text-main-1 rounded-3xl h-10 w-32 flex items-center justify-center">Gerar senha</button>
-                    <button class="duration-75 shadow-xl bg-sec1 hover:bg-gradient-to-tl from-main5 to-main1 hover:border-2 border-sec2 hover:text-main-1 rounded-3xl h-10 w-32 flex items-center justify-center">Copiar senha</button>
+                    <button onclick="passwordGenerator()" id="pwGenerator" class="duration-75 shadow-xl bg-sec1 hover:bg-gradient-to-tr from-main5 to-main1 hover:border-2 border-sec2 hover:text-main-1 rounded-3xl h-10 w-32 flex items-center justify-center">Gerar senha</button>
+                    <button id="pwCopy" class="duration-75 shadow-xl bg-sec1 hover:bg-gradient-to-tl from-main5 to-main1 hover:border-2 border-sec2 hover:text-main-1 rounded-3xl h-10 w-32 flex items-center justify-center">Copiar senha</button>
                 </div>
             </fieldset>
         </section>
