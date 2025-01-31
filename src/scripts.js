@@ -49,3 +49,11 @@ function passwordGenerator(){
     document.getElementById("pwOutput").value = "Senha: " + pwComplete;
 
 }
+
+function passwordCopy(){
+    const getPw = document.getElementById("pwOutput")
+    getPw.select();
+    document.execCommand("copy");
+
+    alert("Senha copiada com sucesso!");
+}
