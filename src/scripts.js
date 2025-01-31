@@ -38,6 +38,7 @@ function passwordGenerator(){
 
     if(pwConfig.length === 0){
         alert("Selecione pelo menos uma especificação para sua senha.");
+        return;
     }
 
     let pwComplete = "";
