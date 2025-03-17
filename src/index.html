@@ -27,7 +27,7 @@
                 </div>
                 
                 <div>
-                    <input type="checkbox" id="lowerLet"">
+                    <input type="checkbox" id="lowerLet">
                     <label for="lowerLet">Minúsculas</label>
                 </div>
                 
@@ -51,6 +51,10 @@
                 </div>
             </fieldset>
         </section>
+        <div class="flex justify-center pl-32 flex-col">
+            <button id="btnHistory" class="duration-75 shadow-xl bg-sec1 hover:bg-gradient-to-tl from-main1 to-main2 hover:border-2 border-sec2 hover:text-main-1 rounded-3xl h-10 w-64 flex items-center justify-center ">Ver histórico de senhas</button>
+            <div id="historyContainer" class="pt-10 gap-2 -z-50 hidden -mt-5 p-4 bg-sec1 text-white rounded-b-xl shadow-lg w-64"></div>
+        </div>
     </main>
         
     <script src="./scripts.js"></script>

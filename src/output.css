@@ -530,6 +530,12 @@
   }
 }
 @layer utilities {
+  .-z-50 {
+    z-index: calc(50 * -1);
+  }
+  .-mt-5 {
+    margin-top: calc(var(--spacing) * -5);
+  }
   .mt-7 {
     margin-top: calc(var(--spacing) * 7);
   }
@@ -538,6 +544,9 @@
   }
   .flex {
     display: flex;
+  }
+  .hidden {
+    display: none;
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
@@ -548,11 +557,17 @@
   .w-32 {
     width: calc(var(--spacing) * 32);
   }
+  .w-64 {
+    width: calc(var(--spacing) * 64);
+  }
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
   .w-96 {
     width: calc(var(--spacing) * 96);
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .items-center {
     align-items: center;
@@ -563,8 +578,15 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
+  }
+  .rounded-b-xl {
+    border-bottom-right-radius: var(--radius-xl);
+    border-bottom-left-radius: var(--radius-xl);
   }
   .border-2 {
     border-style: var(--tw-border-style);
@@ -601,9 +623,16 @@
     --tw-gradient-to: var(--color-main1);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .to-main2 {
+    --tw-gradient-to: var(--color-main2);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .to-main3 {
     --tw-gradient-to: var(--color-main3);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .p-72 {
     padding: calc(var(--spacing) * 72);
@@ -613,6 +642,9 @@
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
+  }
+  .pl-32 {
+    padding-left: calc(var(--spacing) * 32);
   }
   .text-center {
     text-align: center;
@@ -633,6 +665,9 @@
   }
   .text-black {
     color: var(--color-black);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));

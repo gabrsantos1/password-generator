@@ -5,10 +5,6 @@ function passwordGenerator(){
     const number = document.getElementById("number").checked;
     const symbol = document.getElementById("symbol").checked;
 
-    //const upperLetter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    //const lowerLetter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    //const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    //const symbols = ["!", "`", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "{", "|", "}", "~"];
     const upperLetter = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
     const lowerLetter = ["abcdefghijklmnopqrstuvwxyz"];
     const numbers = ["0123456789"];
@@ -49,6 +45,7 @@ function passwordGenerator(){
 
     document.getElementById("pwOutput").value = "Senha: " + pwComplete;
 
+    saveHistory();
 }
 
 function passwordCopy(){
@@ -58,3 +55,25 @@ function passwordCopy(){
 
     alert("Senha copiada com sucesso!");
 }
+
+const history = [];
+const inputField = document.getElementById("pwOutput");
+const historyContainer = document.getElementById("historyContainer");
+const btnHistory = document.getElementById("btnHistory");
+
+function saveHistory(){
+    const getPw = inputField.value.trim();
+    
+    if (getPw && !history.includes(getPw)) {
+        history.push(getPw);
+        historyContainer.innerHTML = history.join("<br>");
+    }
+
+}
+
+function toggleHistory() {
+    historyContainer.classList.toggle("hidden");
+}
+
+btnHistory.addEventListener("click", toggleHistory);
+
